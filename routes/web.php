@@ -15,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $products = config('comics.comics');
-    dd($products);
-    return view('home', compact('products'));
+    $header_links = [
+        'characters',
+        'comics',
+        'movies',
+        'tv',
+        'games',
+        'collectibles',
+        'videos',
+        'fans',
+        'news',
+        'shop'
+    ];
+    return view('home', compact('products', 'header_links'));
 })->name = "home";
