@@ -55,6 +55,7 @@ nav {
 }
 #current-series {
     background-color: $brand_secondary;
+    padding-bottom: 30px;
     #tag-series {
         display: inline-block;
         color: $text_color_primary;
@@ -79,5 +80,29 @@ nav {
     .overflow-hidden {
         height: 200px;
         width: 100%;
+    }
+    button {
+        text-transform: uppercase;
+        color: $text_color_primary;
+        background-color: $brand_primary;
+        padding: 10px 70px;
+        border: 0;
+        font-size: 0.85em;
+        font-weight: 600;
+    }
+}
+
+#options {
+    background-color: $brand_primary;
+    .opt {
+        width: 50px;
+        padding: 50px 0;
+    }
+    h3 {
+        color: $text_color_primary;
+        font-size: 1em;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0 20px;
     }
 }

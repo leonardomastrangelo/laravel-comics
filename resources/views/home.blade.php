@@ -29,6 +29,30 @@
                 </div>
                 @endforeach
             </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <button>
+                    load more
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="options">
+        <div class="container">
+            <div class="row justify-content-around align-items-center">
+                @foreach ($options_links as $link)
+                <div class="col-2 d-flex justify-content-center align-items-center">
+                    <img 
+                    src="/img/{{$link['image']}}" 
+                    alt="{{$link['title']}}"
+                    class="opt">
+                    <h3>
+                        {{$link['title']}}
+                    </h3>
+                </div>
+                @endforeach
+            </div>
         </div>
     </section>
 </main>

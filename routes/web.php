@@ -27,5 +27,27 @@ Route::get('/', function () {
         'news',
         'shop'
     ];
-    return view('home', compact('products', 'header_links'));
+    $options_links = [
+        [
+            'image' => 'buy-comics-digital-comics.png',
+            'title' => 'digital comics'
+        ],
+        [
+            'image' => 'buy-comics-merchandise.png',
+            'title' => 'dc merchandise'
+        ],
+        [
+            'image' => 'buy-comics-subscriptions.png',
+            'title' => 'subscriptions'
+        ],
+        [
+            'image' => 'buy-comics-shop-locator.png',
+            'title' => 'comic shop locator'
+        ],
+        [
+            'image' => 'buy-dc-power-visa.svg',
+            'title' => 'comic shop locator'
+        ],
+    ];
+    return view('home', compact('products', 'header_links', 'options_links'));
 })->name = "home";
