@@ -45,3 +45,39 @@ nav {
         border-bottom: 3px solid $brand_primary !important;
     }
 }
+
+#jumbo {
+    background-image: url(../img/jumbotron.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 50vh;
+}
+#current-series {
+    background-color: $brand_secondary;
+    #tag-series {
+        display: inline-block;
+        color: $text_color_primary;
+        font-size: 1.9em;
+        font-weight: 600;
+        background-color: $brand_primary;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        transform: translateY(-50%);
+    }
+    h2 {
+        font-size: 1em;
+        color: $text_color_primary;
+        text-transform: uppercase;
+        margin: 0;
+        padding-top: 20px;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+    .overflow-hidden {
+        height: 200px;
+        width: 100%;
+    }
+}

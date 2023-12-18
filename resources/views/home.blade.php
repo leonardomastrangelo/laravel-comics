@@ -4,7 +4,32 @@
 
 @section('content')
 <main>
-    <h1>Home page</h1>
+    <section id="jumbo">
+    </section>
 
+    <section id="current-series">
+        <div class="container">
+            <div id="tag-series">
+                <span>
+                    current series
+                </span>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                @foreach ($products as $product)  
+                <div class="col-6 col-md-4 col-xl-2 mb-5">
+                    <div class="overflow-hidden">
+                        <img 
+                        src="{{$product['thumb']}}" 
+                        alt="{{$product['title']}}">
+                    </div>
+                    <h2>
+                        {{$product['title']}}
+                    </h2>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 </main>
 @endsection
