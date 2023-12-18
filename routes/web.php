@@ -85,5 +85,12 @@ Route::get('/', function () {
             'shop DC collectibles',
         ],
     ];
-    return view('home', compact('products', 'header_links', 'options_links', 'jumbo_links'));
+    $footer_links = [
+        'footer-facebook.png',
+        'footer-twitter.png',
+        'footer-youtube.png',
+        'footer-pinterest.png',
+        'footer-periscope.png',
+    ];
+    return view('home', compact('products', 'header_links', 'options_links', 'jumbo_links', 'footer_links'));
 })->name = "home";

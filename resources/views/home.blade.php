@@ -24,7 +24,7 @@
                         alt="{{$product['title']}}">
                     </div>
                     <h2>
-                        {{$product['title']}}
+                        {{$product['series']}}
                     </h2>
                 </div>
                 @endforeach
