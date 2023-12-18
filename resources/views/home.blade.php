@@ -17,7 +17,7 @@
 
             <div class="row justify-content-center align-items-center">
                 @foreach ($products as $product)  
-                <div class="col-6 col-md-4 col-xl-2 mb-5">
+                <div class="col-6 col-md-4 col-xl-2 mb-3">
                     <div class="overflow-hidden">
                         <img 
                         src="{{$product['thumb']}}" 
@@ -52,6 +52,41 @@
                     </h3>
                 </div>
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section id="jumbo_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 d-flex flex-wrap">
+                    @foreach ($jumbo_links as $key=>$link)
+                    <div class="col-4 mb-3">
+                        <h3>
+                            {{$key}}
+                        </h3>
+                        <ul>
+                            @foreach ($link as $anchor)
+                            <li>
+                                <a href="#">
+                                    {{$anchor}}
+                                </a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @if ($loop->last)
+                    <div id="rights">
+                        All Site Content TM and @ 2020 DC Entertainment, unless otherwise <a href="#">noted here</a>. All rights reserved. <a href="#">Cookies Settings</a>
+                    </div>
+                    @endif
+                    @endforeach
+                </div>
+                <div class="col-5">
+                    <div>
+                        <img src="{{Vite::asset('resources/img/dc-logo-bg.png')}}" alt="logo">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

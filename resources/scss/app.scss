@@ -106,3 +106,39 @@ nav {
         padding: 0 20px;
     }
 }
+
+#jumbo_2 {
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 0 20px 0;
+    overflow: hidden;
+    h3 {
+        color: $text_color_primary;
+        text-transform: uppercase;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+            text-decoration: none;
+            color: rgb(140, 140, 140);
+            text-transform: capitalize;
+            font-size: 0.8em;
+        }
+    }
+    #rights {
+        font-size: 0.7em;
+        color: rgb(140, 140, 140);
+        padding: 20px 0;
+        a {
+            text-decoration: none;
+            color: $brand_primary;
+        }
+    }
+    .col-5 img {
+        transform: scale(1.6);
+    }
+}

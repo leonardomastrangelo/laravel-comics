@@ -49,5 +49,41 @@ Route::get('/', function () {
             'title' => 'comic shop locator'
         ],
     ];
-    return view('home', compact('products', 'header_links', 'options_links'));
+    $jumbo_links = [
+        'dc comics' => [
+            'characters',
+            'comics',
+            'movies',
+            'TV',
+            'games',
+            'videos',
+            'news',
+        ],
+        'dc' => [
+            'terms of use',
+            'privacy policy (new)',
+            'ad choises',
+            'advertising',
+            'jobs',
+            'subscriptions',
+            'talent workshops',
+            'CPSC certificates',
+            'ratings',
+            'shop help',
+            'contact us',
+        ],
+        'sites' => [
+            'DC',
+            'MAD magazine',
+            'DC kids',
+            'DC universe',
+            'DC power visa'
+
+        ],
+        'shop' => [
+            'shop DC',
+            'shop DC collectibles',
+        ],
+    ];
+    return view('home', compact('products', 'header_links', 'options_links', 'jumbo_links'));
 })->name = "home";
