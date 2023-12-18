@@ -15,9 +15,9 @@
                 </span>
             </div>
 
-            <div class="row justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-start">
                 @foreach ($products as $product)  
-                <div class="col-6 col-md-4 col-xl-2 mb-3">
+                <div class="col-6 col-md-4 col-xl-2 mb-5">
                     <div class="overflow-hidden">
                         <img 
                         src="{{$product['thumb']}}" 
