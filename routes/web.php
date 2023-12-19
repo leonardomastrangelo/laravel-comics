@@ -85,7 +85,71 @@ Route::get('/comics/{id}', function ($id) {
     $products = config('comics.comics');
     if ($id >= 0 && $id < count($products)) {
         $product = $products[$id];
-        return view('comics.show', compact('product'));
+        $artby = [
+            'jose luis garcia lopez',
+            'clay mann',
+            'rafael albuquerque',
+            'patrick gleason',
+            'dan jurgens',
+            'joe shuster',
+            'nral adams',
+            'curts swan',
+            'john cassady',
+            'oliver coipel',
+            'jim lee'
+        ];
+        $writtenby = [
+            'brad metzler',
+            'tom king',
+            'scott snyder',
+            'geoff johns',
+            'bryan michael bendis',
+            'paul dini',
+            'louise simson',
+            'richard donner',
+            'marv wolfman',
+            'peter j. tomasi',
+            'dan jurgens',
+            'jerry siegel',
+            'paul levitz'
+        ];
+        $jumbo_links = [
+            'dc comics' => [
+                'characters',
+                'comics',
+                'movies',
+                'TV',
+                'games',
+                'videos',
+                'news',
+            ],
+            'dc' => [
+                'terms of use',
+                'privacy policy (new)',
+                'ad choises',
+                'advertising',
+                'jobs',
+                'subscriptions',
+                'talent workshops',
+                'CPSC certificates',
+                'ratings',
+                'shop help',
+                'contact us',
+            ],
+            'sites' => [
+                'DC',
+                'MAD magazine',
+                'DC kids',
+                'DC universe',
+                'DC power visa'
+
+            ],
+            'shop' => [
+                'shop DC',
+                'shop DC collectibles',
+            ],
+        ];
+        return view('comics.show', compact('product', 'artby', 'writtenby', 'jumbo_links'));
     } else {
         abort(404);
     }

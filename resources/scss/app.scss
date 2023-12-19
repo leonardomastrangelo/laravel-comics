@@ -235,5 +235,84 @@ footer {
     #comic {
         width: 220px;
     }
+    #comic_info {
+        padding: 70px 0;
+        h2 {
+            font-size: 2.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $text_color_four;
+        }
+        .info_badge {
+            background-color: #55BA58;
+            border-bottom: 1px solid black;
+            margin: 20px 0;
+            .col-4 {
+                border-left: 1px solid black;
+            }
+        }
+        .low-color {
+            color: #BAF980;
+        }
+        p {
+            color: #555555;
+            line-height: 2em;
+            font-size: 0.95em;
+        }
+        h4 {
+            color: #555555;
+            text-transform: uppercase;
+            text-align: end;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            font-size: 1.1em;
+        }
+    }
+    #specifics {
+        font-size: 0.9em;
+        padding-top: 50px;
+        background-color: #F6F6F6;
 
+        h4 {
+            padding-bottom: 30px;
+        }
+        h5{
+        font-size: 1em;
+
+        }
+        a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $brand_primary;
+
+        }
+       
+        .list-title {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            color: #9a9a9a;
+        }
+        i {
+            font-size: 3em;
+            color: #9a9a9a;
+        }
+    }
+    .border_top {
+            border-top: 1px solid #D8D8D8;
+        }
+    .border_bottom {
+            border-bottom: 1px solid #D8D8D8;
+        }
+    .main-links {
+        border: 1px solid #D8D8D8;
+        .container {
+        border-left: 1px solid #D8D8D8;
+        border-right: 1px solid #D8D8D8;
+        }
+        .col-3 {
+        border-right: 1px solid #D8D8D8;
+
+        }
+    }
 }
