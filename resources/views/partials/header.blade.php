@@ -7,11 +7,11 @@
         </div>
     </div>
     <nav class="container d-flex justify-content-between py-3">
-        <div>
+        <a href="{{route('home')}}">
             <img 
             src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="logo"
             class="d-block">
-        </div>
+        </a>
         <ul>
             <li>
                 <a href="#">
@@ -19,11 +19,13 @@
                 </a>
             </li>
             <li>
-                <a href="{{route('home')}}" class="{{(Route::currentRouteName() == 'home') ? 'active' : ''}}">
+                <a href="{{route('comics.index')}}" class="{{(Route::currentRouteName() == 'comics.index') ? 'active' : ''}}">
                     comics
                 </a>
+                @if (Route::currentRouteName() == 'comics.index')
                 <div class="active-bar">
                 </div>
+                @endif
             </li>
             <li>
                 <a href="#" >

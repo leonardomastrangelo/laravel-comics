@@ -75,3 +75,8 @@ Route::get('/', function () {
     ];
     return view('home', compact('products', 'options_links', 'jumbo_links'));
 })->name("home");
+
+Route::get('/comics', function () {
+    $products = config('comics.comics');
+    return view('comics.index', compact('products'));
+})->name("comics.index");
