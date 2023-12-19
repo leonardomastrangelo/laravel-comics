@@ -12,7 +12,7 @@
             </div>
 
             <div class="row justify-content-center align-items-start">
-                @foreach ($products as $product)  
+                @foreach ($products as $key=>$product)  
                 <div class="col-6 col-md-4 col-xxl-2 mb-5">
                     <div class="overflow-hidden">
                         <img 
@@ -28,15 +28,13 @@
                     <p class="py-2">
                         {!!substr($product['description'],0,100) . '...'!!}
                     </p>
+                    <a href="{{route('comics.show', $key)}}" class="btn btn-primary my-3">
+                        View Details
+                    </a>
                 </div>
                 @endforeach
             </div>
 
-            <div class="d-flex justify-content-center align-items-center">
-                <button>
-                    load more
-                </button>
-            </div>
         </div>
     </section>
 @endsection

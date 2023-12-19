@@ -80,3 +80,15 @@ Route::get('/comics', function () {
     $products = config('comics.comics');
     return view('comics.index', compact('products'));
 })->name("comics.index");
+
+Route::get('/comics/{id}', function ($id) {
+    $products = config('comics.comics');
+    if ($id >= 0 && $id < count($products)) {
+        $product = $products[$id];
+        return view('comics.show', compact('product'));
+    } else {
+        abort(404);
+    }
+})->name("comics.show");
+
+
