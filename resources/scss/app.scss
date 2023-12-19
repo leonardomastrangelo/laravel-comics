@@ -29,6 +29,9 @@ nav {
         align-items: center;
         padding: 10px 70px;
         margin: 0;
+        li {
+            position: relative;
+        }
         a {
             color: $text_color_secondary;
             font-size: 1.1em;
@@ -45,7 +48,20 @@ nav {
         border-radius: 0 !important;
         border-bottom: 3px solid $brand_primary !important;
     }
+    .active {
+        color: $brand_primary;
+            font-weight: 600;
+    }
+    .active-bar {
+        width: 65%;
+        height: 8px;
+        background-color: $brand_primary;
+        position: absolute;
+        top: 275%;
+        left: 18%;
+    }
 }
+
 
 #jumbo {
     background-image: url(../img/jumbotron.jpg);

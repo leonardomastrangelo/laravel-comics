@@ -1,3 +1,7 @@
+@php
+    $footer_menu = config('comics.footer_links')
+@endphp
+
 <footer>
     <div class="container d-flex justify-content-between align-items-center">
         <div>
@@ -12,7 +16,7 @@
                     follow us
                 </a>
             </li>
-            @foreach ($footer_links as $link)
+            @foreach ($footer_menu as $link)
             <li>
                 <a href="#">
                     <img src="/img/{{$link}}" alt="">

@@ -1,3 +1,4 @@
+
 <header>
     <div id="top-header">
         <div class="container d-flex justify-content-end">
@@ -12,13 +13,58 @@
             class="d-block">
         </div>
         <ul>
-            @foreach ($header_links as $link)
             <li>
                 <a href="#">
-                    {{$link}}
+                    characters
                 </a>
             </li>
-            @endforeach
+            <li>
+                <a href="{{route('home')}}" class="{{(Route::currentRouteName() == 'home') ? 'active' : ''}}">
+                    comics
+                </a>
+                <div class="active-bar">
+                </div>
+            </li>
+            <li>
+                <a href="#" >
+                    movies
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    tv
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    games
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    collectibles
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    videos
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    fans
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    news
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    shop
+                </a>
+            </li>
         </ul>
         <div class="input-group d-flex align-items-center">
             <input type="text" class="form-control"

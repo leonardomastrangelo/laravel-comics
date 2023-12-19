@@ -15,18 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $products = config('comics.comics');
-    $header_links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
     $options_links = [
         [
             'image' => 'buy-comics-digital-comics.png',
@@ -85,12 +73,5 @@ Route::get('/', function () {
             'shop DC collectibles',
         ],
     ];
-    $footer_links = [
-        'footer-facebook.png',
-        'footer-twitter.png',
-        'footer-youtube.png',
-        'footer-pinterest.png',
-        'footer-periscope.png',
-    ];
-    return view('home', compact('products', 'header_links', 'options_links', 'jumbo_links', 'footer_links'));
-})->name = "home";
+    return view('home', compact('products', 'options_links', 'jumbo_links'));
+})->name("home");
