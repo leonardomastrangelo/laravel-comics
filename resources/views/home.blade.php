@@ -19,7 +19,7 @@
                 @foreach ($products as $key=>$product)  
                 <div class="col-6 col-md-4 col-xl-2 mb-5">
                     <div class="overflow-hidden">
-                        <a href="{{route('comics.show', $key)}}">
+                        <a href="{{route('comics.show', $key + 1)}}">
                             <img
                             src="{{$product['thumb']}}"
                             alt="{{$product['title']}}">

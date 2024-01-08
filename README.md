@@ -45,3 +45,42 @@ $fa-font-path: "../webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 ```
+
+## clono su github
+
+# copio file .env.example e lo rinomino in .env
+
+composer install
+
+php artisan key:generate
+
+npm install
+
+# creo il database da phpmyadmin
+
+# inserisco i dati per il collegamento al db in env
+
+# migration
+php artisan make:migration create_nome_tabella_table
+php artisan make:migration update_users_table --table=users
+php artisan make:migration add_phone_number_to_users_table
+
+php artisan migrate
+php artisan migrate:rollback
+php artisan migrate:rollback --step=1 (batch)
+php artisan migrate:reset !!! MAI !!!
+
+# seeder
+php artisan make:seeder UsersTableSeeder
+php artisan db:seed --class=UsersTableSeeder
+
+# preparo le rotte file web.php es. 
+Route::get('/books', [BookController::class, 'index'])->name('books.index');
+
+# creo controller
+php artisan make:controller NomeController --resource
+
+#creo model
+php artisan make:model Nome -rcms
+
+# creo le views relative

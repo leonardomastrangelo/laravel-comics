@@ -1,24 +1,27 @@
 @extends('layouts.app')
 
-@section('title', "Product Details")
+@section('title', "Comic Create")
 
 @section('content')
     <main class="details">
 
         <div id="jumbo">
         </div>
-        <div class="img-container">
-            <div class="container position-relative">
-                <div class="img-card">
-                    <img id="comic" src="{{$comic->thumb}}" alt="">
-                    <span>comic book</span>
-                    <div>view gallery</div>
-                </div>
-            </div>
-        </div>
 
         <section id="comic_info" class="container">
-            <div class="row justify-content-between">
+            <form action="{{route('comics.store')}}" method="POST">
+                {{-- token --}}
+                @csrf
+
+                <input type="text" id="title" name="title" placeholder="inserisci un titolo" class="form-control">
+                <input type="text" id="description" name="description" placeholder="inserisci una description" class="form-control">
+                <input type="text" id="price" name="price" placeholder="inserisci un price" class="form-control">
+                <input type="text" id="type" name="type" placeholder="inserisci un type" class="form-control">
+
+                <button type="submit">invia</button>
+
+            </form>
+            {{-- <div class="row justify-content-between">
                 <div class="col-7">
                     <h2>
                         {{$comic->title}}
@@ -47,7 +50,7 @@
                         <img src="{{Vite::asset('resources/img/adv.jpg')}}" alt="">
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </section>
 
         {{-- <section id="specifics">
